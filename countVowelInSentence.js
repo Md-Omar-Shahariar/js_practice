@@ -1,4 +1,5 @@
 function vowelCount(sentence){
+    sentence = sentence.toLowerCase()
     let count = 0
     const vowel =['a','e','i','o','u']
     for(let i = 0;i<sentence.length;i++ ){
@@ -9,6 +10,21 @@ function vowelCount(sentence){
     } 
     return count
 }
+// for of loop
 
-let sentence = "i eat rice with fish curry"
+function vowelCount1(sentence){
+    sentence = sentence.toLowerCase()
+    let count = 0
+    const vowel =['a','e','i','o','u']
+    for(let letter of sentence){
+        
+        if(vowel.indexOf(letter) != -1){
+            count++
+        }
+    } 
+    return count
+}
+
+let sentence = "I eat rice with fish curry"
 console.log(vowelCount(sentence));
+console.log(vowelCount1(sentence));
